@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+
+    <nav class="flex justify-around">
+      <h1>DojoWeather</h1>
+      <ul class="flex">
+        <li onclick="alert('Loading weather report...')">Burbank</li>
+        <li onclick="alert('Loading weather report...')">Chicago</li>
+        <li onclick="alert('Loading weather report...')">Dallas</li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+
+    <header class="flex">
+      <h2>San Jose</h2>
+      <p>show temperature in
+      <select name="degrees" id="degrees" onchange="tempChange(this.value)">
+        <option value="celcius">°Celcius</option>
+        <option value="fahrenheit">°Fahrenheit</option>
+      </select>
+      </p>
+    </header>
+
+    <!-- Main Body -->
+
+    <div class="flex justify-around container">
+      <div class="box">
+        <h3>Today</h3>
+        <img src="/assets/some_rain.png" alt="rain-clouds" />
+        <p>some rain</p>
+        <ul class="degrees flex">
+          <li class="left-degree">24</li>
+          <li class="right-degree">18</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Tomorrow</h3>
+        <img src="/assets/some_sun.png" alt="sun" />
+        <p>some sun</p>
+        <ul class="degrees flex">
+          <li class="left-degree">27</li>
+          <li class="right-degree">19</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Friday</h3>
+        <img src="/assets/some_clouds.png" alt="some-clouds" />
+        <p>some clouds</p>
+        <ul class="degrees flex">
+          <li class="left-degree">21</li>
+          <li class="right-degree">16</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Saturday</h3>
+        <img src="/assets/some_sun.png" alt="sun" />
+        <p>some sun</p>
+        <ul class="degrees flex">
+          <li class="left-degree">26</li>
+          <li class="right-degree">21</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cookie Box -->
+
+    <div class="cookie justify-center flex">
+      <img src="/assets/cookie.png" alt="cookie" />
+      <p>
+        <strong>Stop! Cookie time</strong> <br>
+        We use cookies (sadly not the edible ones) to personalize content and
+        ads, to provide social media features and to analyse our traffic.
+        <a href="#">Read more...</a>
+      </p>
+      <button onclick="hide()">I Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
